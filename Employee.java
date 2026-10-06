@@ -6,7 +6,7 @@ public class Employee {
 
     // Constructor 1 - Default Constructor
     Employee() {
-        name = "Unknown";
+        name = "";
         id = 0;
         salary = 0.0;
     }
@@ -18,36 +18,36 @@ public class Employee {
         this.salary = salary;
     }
 
-    // Setter Methods
-    void setName(String name) {
+    // Set Methods
+    public void setName(String name) {
         this.name = name;
     }
 
-    void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    void setSalary(double salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    // Getter Methods
-    String getName() {
+    // Get Methods
+    public String getName() {
         return name;
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
-    double getSalary() {
+    public double getSalary() {
         return salary;
     }
 
     // Display Method
-    void display() {
-        System.out.println("Employee Name: " + name);
-        System.out.println("Employee ID: " + id);
-        System.out.println("Employee Salary: " + salary);
+    public void display() {
+        System.out.println("Employee Name: " + getName());
+        System.out.println("Employee ID: " + getId());
+        System.out.println("Employee Salary: " + getSalary());
     }
 }
