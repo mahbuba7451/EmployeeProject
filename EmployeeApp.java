@@ -1,26 +1,29 @@
+import java.util.Scanner;
+
 public class EmployeeApp {
 
     public static void main(String[] args) {
 
-        // Using Constructor 1
-        Employee emp1 = new Employee();
-        emp1.setName("Rahim");
-        emp1.setId(101);
-        emp1.setSalary(25000);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Employee 1:");
-        emp1.display();
+        Employee emp = new Employee();
 
-        // Using Constructor 2
-        Employee emp2 = new Employee("Karim", 102, 30000);
+        System.out.print("Enter Employee ID: ");
+        emp.setId(input.nextInt());
+        input.nextLine();
 
-        System.out.println("\nEmployee 2:");
-        emp2.display();
+        System.out.print("Enter Employee Name: ");
+        emp.setName(input.nextLine());
 
-        // Using Getter Methods
-        System.out.println("\nUsing Getter Methods:");
-        System.out.println(emp2.getName());
-        System.out.println(emp2.getId());
-        System.out.println(emp2.getSalary());
+        System.out.print("Enter Employee Salary: ");
+        emp.setSalary(input.nextDouble());
+
+        System.out.println("\nEmployee Information:");
+
+        System.out.println("Employee ID: " + emp.getId());
+        System.out.println("Employee Name: " + emp.getName());
+        System.out.println("Employee Salary: " + emp.getSalary());
+
+        input.close();
     }
 }
